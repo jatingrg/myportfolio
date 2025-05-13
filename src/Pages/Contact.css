@@ -1,0 +1,161 @@
+.about-wrapper {
+  color: #c9d1d9;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  border-right: 1px solid #21262d;
+  padding: 16px;
+}
+
+.section-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact {
+  border-top: 2px solid #314158;
+  padding-top: 20px;
+}
+.contact-info {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.footer-icons {
+  margin-top: 40px;
+  font-size: 13px;
+  color: #8b949e;
+}
+
+.code-area {
+  flex: 1;
+  border-right: 1px solid #21262d;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 13px;
+  color: #90A1B9;
+  margin: 8px 0 4px;
+}
+
+input,
+textarea {
+  border: 2px solid #30363d;
+  color: #c9d1d9;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 6px;
+  width: 80%;
+  height: 25%;
+  resize: none;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #fff;
+}
+
+textarea {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #f2a744;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #e0932e;
+}
+
+.snippet-showcase {
+  width: 40%;
+  padding: 20px;
+  background-color: #0F172B;
+}
+
+.snippet {
+  margin-top: 10px;
+  background-color: #0F172B;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.snippet-meta {
+  font-size: 12px;
+  color: #615FFF;
+  margin-bottom: 5px;
+}
+
+.code-snippet {
+  background: none;
+  color: #615FFF;
+  font-size: 15px;
+  white-space: pre-wrap;
+}
+.message-text{
+  color:#FFB86A;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-wrapper {
+    height: auto;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #21262d;
+    padding: 12px;
+  }
+
+  .code-area {
+    width: 100%;
+    padding: 16px;
+    border-right: none;
+    border-bottom: 1px solid #21262d;
+  }
+
+  .snippet-showcase {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .footer-icons {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
