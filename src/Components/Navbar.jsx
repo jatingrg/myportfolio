@@ -19,6 +19,18 @@ function Navbar() {
           <Link to="/about">_about.me</Link>
           <Link to="/statistcs">_statistics</Link>
           <Link to="/project">_projects</Link>
+          <a href="/resume.pdf" download>
+    <button style={{ 
+    padding: "10px 20px", 
+    backgroundColor: "#007bff", 
+    color: "#fff", 
+    border: "none", 
+    borderRadius: "5px", 
+    cursor: "pointer" 
+  }}>
+    Download Resume
+  </button>
+</a>
           <div className='nav-right'>
             <Link to="/contact">_contact.me</Link>
           </div>
