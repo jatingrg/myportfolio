@@ -6,45 +6,59 @@ const techList = ['React', 'HTML', 'CSS', 'Vue', 'Angular', 'Gatsby', 'Flutter']
 const projects = [
   {
     id: 1,
-    title: 'Project 1',
-    subtitle: '_ui-animations',
-    description: 'Duis aute irure dolor in velit esse cillum dolore.',
-    tech: 'React',
-    image: '',
-    github: 'https://github.com/username/project1',
-    preview: 'https://project1-preview.com',
+    title: 'KeyVista',
+    subtitle: 'PropertyListingApp',
+    description: 'PropertyListing is a real estate platform where users can browse properties, while admins have access to add, update, or delete listings using a simple CRUD interface with admin privileges.',
+    tech: 'HTML CSS JAVASCRIPT FIREBASE',
+    image: './public/keyvistaimage.png',
+    github: 'https://github.com/jatingrg/Propertylistingweb',
+    preview: 'https://keyvistaa.netlify.app/',
   },
   {
     id: 2,
-    title: 'Project 2',
-    subtitle: '_tetris-game',
-    description: 'Duis aute irure dolor in velit esse cillum dolore.',
-    tech: 'React , CSS',
-    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55b',
-    github: 'https://github.com/username/project2',
-    preview: 'https://project2-preview.com',
+    title: 'EventSpotLite',
+    subtitle: 'CRUD',
+    description: 'EventSpotlite is a simple event management app with CRUD operations, fake authentication, and JSON Server integration, allowing users to add, update, delete, and view events effortlessly.',
+    tech: 'REACT TAILWIND CSS',
+    image: './public/eventspotllite.png',
+    github: 'https://github.com/jatingrg/Jatin_Garg_EventSpotLite',
+    preview: 'https://jatin-garg-event-spot-lite-ctlv.vercel.app/',
   },
   {
     id: 3,
-    title: 'Project 3',
+    title: 'WorldWise',
     subtitle: '_glassy-ui',
-    description: 'Duis aute irure dolor in velit esse cillum dolore.',
+    description: 'WorldWise is a location-marking app where users can add and save places on an interactive map, helping them track and visualize visited or favorite locations easily and intuitively.',
     tech: 'CSS',
-    image: 'https://images.unsplash.com/photo-1626785774573-4b7993153456',
+    image: './public/worldwise.png',
     github: 'https://github.com/username/project3',
+    preview: 'https://worldwise-seven-neon.vercel.app/',
+  },
+  {
+    id: 4,
+    title: 'Movie',
+    subtitle: 'Movie App',
+    description: 'A dynamic Movie App where users can search for their favorite movies, view details, and add selected titles to a personal cart for easy tracking or later viewing.',
+    tech: 'React.js',
+    image: 'https://images.unsplash.com/photo-1626785774573-4b7993153456',
+    github: 'https://github.com/jatingrg/movieapp',
+    preview: 'https://luminous-druid-032748.netlify.app/',
+  },
+  {
+    id: 5,
+    title: 'Quiz-App',
+    subtitle: '_glassy-ui',
+    description: 'This React quiz app presents multiple-choice questions, tracks scores, and includes a timer. It uses local data, useReducer for state management, and components for questions, progress, and final results.',
+    tech: 'React.js',
+    image: './public/reactquiz.png',
+    github: 'https://github.com/jatingrg/QuizApp',
     preview: 'https://project3-preview.com',
   },
 ];
 
 function Project() {
-  const [activeFilters, setActiveFilters] = useState(['React']);
 
-  const toggleFilter = (tech) => {
-    setActiveFilters((prev) =>
-      prev.includes(tech) ? prev.filter((t) => t !== tech) : [...prev, tech]
-    );
-  };
-
+ 
   const filteredProjects = projects;
   
 
@@ -67,7 +81,6 @@ function Project() {
       </div> */}
 
       <div className="project-content">
-        <div className="project-tab-header">{activeFilters.join('; ')} ✕</div>
         <div className="project-grid">
           {filteredProjects.map((proj) => (
             <div key={proj.id} className="project-card">
@@ -78,6 +91,8 @@ function Project() {
               <img src={proj.image} alt={proj.title} className="project-img" />
               <div className="card-body">
                 <p>{proj.description}</p>
+                <p> Tech Stack-<span className='tech-badge'>{(proj.tech).split('\n')}</span></p>
+
                 <div className="card-links">
                   <a
                     href={proj.github}
@@ -97,7 +112,6 @@ function Project() {
                   </a>
                 </div>
               </div>
-              <div className="tech-badge">{proj.tech}</div>
             </div>
           ))}
         </div>

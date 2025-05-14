@@ -13,7 +13,7 @@ function Footer() {
     <a href="https://linkedin.com/in/yourhandle" target="_blank">in</a>
   </div>
   <div className="right">
-    <a href="https://github.com/yourhandle" target="_blank">@username</a>
+    <a href="https://github.com/jatingrg" target="_blank">@jatingrg</a>
   </div>
 </footer>
 
