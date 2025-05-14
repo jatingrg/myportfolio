@@ -6,7 +6,7 @@ const techList = ['React', 'HTML', 'CSS', 'Vue', 'Angular', 'Gatsby', 'Flutter']
 const projects = [
   {
     id: 1,
-    title: 'KeyVista',
+    title: 'KeyVista1',
     subtitle: 'PropertyListingApp',
     description: 'PropertyListing is a real estate platform where users can browse properties, while admins have access to add, update, or delete listings using a simple CRUD interface with admin privileges.',
     tech: 'HTML CSS JAVASCRIPT FIREBASE',
