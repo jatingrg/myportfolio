@@ -1,27 +1,33 @@
+/* === General Navbar Styles === */
 nav {
   display: flex;
-    border-bottom: 2px solid #314158;
-
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #314158;
+  background-color: #0d1117;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
 }
-.nav-left{
-    text-decoration: none;
-      padding: 10px 40px 10px 40px;
 
+/* Left Brand Name */
+.nav-left {
+  padding: 10px 20px;
   color: #90A1B9;
   font-weight: 500;
   border: 1px solid #314158;
   transition: color 0.3s ease;
 }
+
+/* Links (Desktop & Shared) */
 a {
   text-decoration: none;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   color: #90A1B9;
   font-weight: 500;
   border: 1px solid #314158;
-
   transition: color 0.3s ease;
-  
-  display: inline-block; 
+  display: inline-block;
 }
 
 nav a:hover {
@@ -29,9 +35,12 @@ nav a:hover {
   border-bottom: 2px solid #FFB86A;
 }
 
+/* Rightmost Link Group */
 .nav-right {
-  margin-left: auto; 
+  margin-left: auto;
 }
+
+/* Hamburger Icon (Hidden on Desktop) */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -39,12 +48,16 @@ nav a:hover {
   cursor: pointer;
   margin-left: auto;
 }
+
+/* Nav Links Container (Desktop) */
 .nav-links {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 15px;
 }
 
+/* === Responsive Styles === */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -62,7 +75,7 @@ nav a:hover {
     z-index: 5;
   }
 
-  .nav-links.active {
+  .nav-links.show {
     display: flex;
   }
 

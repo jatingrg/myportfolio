@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import "./Navbar.css";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // start closed
 
   return (
     <>
@@ -19,7 +19,7 @@ function Navbar() {
           <Link to="/about">_about.me</Link>
           <Link to="/statistcs">_statistics</Link>
           <Link to="/project">_projects</Link>
-        
+
           <div className='nav-right'>
             <Link to="/contact">_contact.me</Link>
           </div>

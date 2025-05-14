@@ -3,6 +3,7 @@ import "./About.css";
 
 function About() {
   const [selectedFile, setSelectedFile] = useState("education");
+  const [showResumeModal, setShowResumeModal] = useState(false);
 
   const renderContent = () => {
     switch (selectedFile) {
@@ -27,7 +28,7 @@ function About() {
 *
 * High School - ABC School
 */`;
-case "skills":
+      case "skills":
         return `/**
 * HTML
 * CSS
@@ -35,7 +36,6 @@ case "skills":
 *
 * React.js
 * Chakra UI
-
 
 * DSA
 */`;
@@ -48,22 +48,36 @@ case "skills":
 
   return (
     <div className="about-wrapper">
-     
-   
       <div className="main-content">
         <div className="sidebar">
           <div className="section-label">personal-info</div>
           <div className="folder-group">
-            <div className={`folder ${selectedFile === "bio" ? "active" : ""}`} onClick={() => setSelectedFile("bio")}>
+            <div
+              className={`folder ${selectedFile === "bio" ? "active" : ""}`}
+              onClick={() => setSelectedFile("bio")}
+            >
               <span>📄</span> bio
             </div>
-            <div className={`folder ${selectedFile === "interests" ? "active" : ""}`} onClick={() => setSelectedFile("interests")}>
+            <div
+              className={`folder ${
+                selectedFile === "interests" ? "active" : ""
+              }`}
+              onClick={() => setSelectedFile("interests")}
+            >
               <span>📄</span> interests
             </div>
-             <div className={`folder ${selectedFile === "interests" ? "active" : ""}`} onClick={() => setSelectedFile("skills")}>
+            <div
+              className={`folder ${selectedFile === "skills" ? "active" : ""}`}
+              onClick={() => setSelectedFile("skills")}
+            >
               <span>📄</span> skills
             </div>
-            <div className={`folder ${selectedFile === "education" ? "active" : ""}`} onClick={() => setSelectedFile("education")}>
+            <div
+              className={`folder ${
+                selectedFile === "education" ? "active" : ""
+              }`}
+              onClick={() => setSelectedFile("education")}
+            >
               <span>📂</span> education
               <div className="subfolder">📄 high-school</div>
               <div className="subfolder">📄 university</div>
@@ -75,18 +89,19 @@ case "skills":
           <div className="contact-info">📞 +91 8847414135</div>
 
           <div className="footer-icons">
-              <a href="/resume.pdf" download>
-    <button style={{ 
-    padding: "10px 20px", 
-
-    color: "#fff", 
-    border: "none", 
-    borderRadius: "5px", 
-    cursor: "pointer" 
-  }}>
-    Download Resume
-  </button>
-</a>
+            <button
+              onClick={() => setShowResumeModal(true)}
+              style={{
+                padding: "10px 20px",
+                backgroundColor: "#007bff",
+                color: "#fff",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+              }}
+            >
+              View Resume
+            </button>
           </div>
         </div>
 
@@ -98,7 +113,9 @@ case "skills":
         <div className="snippet-showcase">
           <p>// Code snippet showcase:</p>
           <div className="snippet">
-            <p className="snippet-meta">@username · 5 months ago · ⭐ 3 stars</p>
+            <p className="snippet-meta">
+              @username · 5 months ago · ⭐ 3 stars
+            </p>
             <pre className="code-snippet">
 {`function initializeModelChunk<T>(chunk) {
   const value = parseModel(chunk._response, chunk._value);
@@ -112,6 +129,27 @@ case "skills":
           </div>
         </div>
       </div>
+
+      {/* Resume Modal */}
+      {showResumeModal && (
+        <div className="resume-modal">
+          <div className="modal-content">
+            <span className="close-btn" onClick={() => setShowResumeModal(false)}>
+              &times;
+            </span>
+            <h3>My Resume</h3>
+            <iframe
+              src="/resume.pdf"
+              title="Resume Preview"
+              width="100%"
+              height="500px"
+            ></iframe>
+            <a href="/resume.pdf" download>
+              <button className="download-btn">Download Resume</button>
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
