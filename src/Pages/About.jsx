@@ -75,9 +75,18 @@ case "skills":
           <div className="contact-info">📞 +91 8847414135</div>
 
           <div className="footer-icons">
-            find me in:
-            <span>🔗</span>
-            <span>💼</span>
+              <a href="/resume.pdf" download>
+    <button style={{ 
+    padding: "10px 20px", 
+
+    color: "#fff", 
+    border: "none", 
+    borderRadius: "5px", 
+    cursor: "pointer" 
+  }}>
+    Download Resume
+  </button>
+</a>
           </div>
         </div>
 
