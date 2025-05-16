@@ -105,7 +105,7 @@ development initiatives
 
           <div className="footer-icons">
             <button
-              onClick={viewAndDownloadResume()}
+              onClick={viewAndDownloadResume}
               style={{
                 padding: "10px 20px",
                 backgroundColor: "",
@@ -114,9 +114,9 @@ development initiatives
                 borderRadius: "5px",
                 cursor: "pointer",
               }}
-            ><a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            >
               View Resume
-              </a>
+            
             </button>
           </div>
         </div>
