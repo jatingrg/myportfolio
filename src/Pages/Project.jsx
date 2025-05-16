@@ -31,7 +31,7 @@ const projects = [
     description: 'WorldWise is a location-marking app where users can add and save places on an interactive map, helping them track and visualize visited or favorite locations easily and intuitively.',
     tech: 'CSS',
     image: '/worldwise.png',
-    github: 'https://github.com/username/project3',
+    github: 'https://github.com/jatingrg/Worldwise',
     preview: 'https://worldwise-seven-neon.vercel.app/',
   },
   {
