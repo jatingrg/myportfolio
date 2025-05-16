@@ -10,9 +10,10 @@ function About() {
       case "bio":
         return `/**
 * About Me
-* Passionate developer with a strong focus
-* on frontend development and user experience.
-* Currently exploring full-stack technologies.
+* Highly skilled and motivated Full Stack Web Developer proficient in MERN stack. Demonstrated ability in successfully
+building both solo and collaborative projects. Possesses strong technical expertise in front-end and back-end development,
+coupled with excellent problem-solving and communication skills. Ready to contribute to innovative and impactful web
+development initiatives
 */`;
       case "interests":
         return `/**
@@ -23,10 +24,10 @@ function About() {
       case "education":
         return `/**
 * Education
-* Chitkara University
-* B.E. Computer Science (2020–2024)
+* Chitkara University CGPA - 8.55
+* B.E. Computer Science (2021–2025)
 *
-* High School - ABC School
+* 
 */`;
       case "skills":
         return `/**
@@ -93,7 +94,7 @@ function About() {
               onClick={() => setShowResumeModal(true)}
               style={{
                 padding: "10px 20px",
-                backgroundColor: "#007bff",
+                backgroundColor: "",
                 color: "#fff",
                 border: "none",
                 borderRadius: "5px",
@@ -130,7 +131,7 @@ function About() {
         </div>
       </div>
 
-      {/* Resume Modal */}
+     
       {showResumeModal && (
         <div className="resume-modal">
           <div className="modal-content">
