@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./About.css";
 
 function About() {
@@ -46,6 +46,20 @@ development initiatives
 */`;
     }
   };
+  
+  
+    const viewAndDownloadResume = () => {
+  window.open('/resume.pdf', '_blank');
+
+  const link = document.createElement('a');
+  link.href = '/resume.pdf';
+  link.download = 'resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
 
   return (
     <div className="about-wrapper">
@@ -91,7 +105,7 @@ development initiatives
 
           <div className="footer-icons">
             <button
-              onClick={() => setShowResumeModal(true)}
+              onClick={viewAndDownloadResume()}
               style={{
                 padding: "10px 20px",
                 backgroundColor: "",
