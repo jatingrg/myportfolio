@@ -49,11 +49,11 @@ development initiatives
   
   
     const viewAndDownloadResume = () => {
-  window.open('/resume.pdf', '_blank');
+  window.open('/jatingarg_resume.pdf', '_blank');
 
   const link = document.createElement('a');
-  link.href = '/resume.pdf';
-  link.download = 'resume.pdf';
+  link.href = '/jatingarg_resume.pdf';
+  link.download = 'jatingarg_resume.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
