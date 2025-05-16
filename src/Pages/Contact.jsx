@@ -35,7 +35,7 @@ function Contact() {
             <div className="contact-info">📞 +91 8847414135</div>
           </div>
 
-          <div className="section-label">find-me-also-in</div>
+          {/* <div className="section-label">find-me-also-in</div>
           <div className="contact">
             <div className="contact-info">🔗 YouTube</div>
             <div className="contact-info">🔗 dev.to</div>
@@ -47,7 +47,7 @@ function Contact() {
             find me in:
             <span>❌</span>
             <span>🔗</span>
-          </div>
+          </div> */}
         </div>
 
         {/* Form Area */}

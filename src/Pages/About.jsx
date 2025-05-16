@@ -100,8 +100,9 @@ development initiatives
                 borderRadius: "5px",
                 cursor: "pointer",
               }}
-            >
+            ><a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               View Resume
+              </a>
             </button>
           </div>
         </div>
@@ -132,25 +133,7 @@ development initiatives
       </div>
 
      
-      {showResumeModal && (
-        <div className="resume-modal">
-          <div className="modal-content">
-            <span className="close-btn" onClick={() => setShowResumeModal(false)}>
-              &times;
-            </span>
-            <h3>My Resume</h3>
-            <iframe
-              src="/resume.pdf"
-              title="Resume Preview"
-              width="100%"
-              height="500px"
-            ></iframe>
-            <a href="/resume.pdf" download>
-              <button className="download-btn">Download Resume</button>
-            </a>
-          </div>
-        </div>
-      )}
+      
     </div>
   );
 }
